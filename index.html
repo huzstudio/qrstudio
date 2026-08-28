@@ -1,13 +1,175 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>qrstudio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Huz Studio; sakin, anlaşılır ve özenli dijital ürünler geliştiren bağımsız bir stüdyo." />
+    <meta name="theme-color" content="#f4f3ef" />
+    <title>Huz Studio — Bağımsız ürün stüdyosu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: { mono: ['IBM Plex Mono', 'ui-monospace', 'monospace'] },
+            colors: {
+              paper: '#f4f3ef',
+              ink: '#141414',
+              night: '#111111',
+              fog: '#a7a7a2',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      ::selection { background: #141414; color: #f4f3ef; }
+      .dark ::selection { background: #f4f3ef; color: #141414; }
+      body {
+        background-image: linear-gradient(to right, rgb(20 20 20 / 0.045) 1px, transparent 1px), linear-gradient(to bottom, rgb(20 20 20 / 0.045) 1px, transparent 1px);
+        background-size: 28px 28px;
+      }
+      .dark body {
+        background-image: linear-gradient(to right, rgb(255 255 255 / 0.045) 1px, transparent 1px), linear-gradient(to bottom, rgb(255 255 255 / 0.045) 1px, transparent 1px);
+      }
+    </style>
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <body class="bg-paper font-mono text-ink antialiased transition-colors duration-300 dark:bg-night dark:text-paper">
+    <a href="#icerik" class="fixed left-4 top-4 z-50 -translate-y-24 border border-current bg-paper px-3 py-2 text-xs focus:translate-y-0 dark:bg-night">İçeriğe geç</a>
+
+    <header class="sticky top-0 z-40 border-b border-black/15 bg-paper/90 backdrop-blur-md dark:border-white/15 dark:bg-night/90">
+      <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8">
+        <a href="/" class="group flex items-center gap-3" aria-label="Huz Studio ana sayfa">
+          <span class="grid size-8 place-items-center rounded-full border border-current text-[10px] font-semibold transition-transform group-hover:rotate-12">H/S</span>
+          <span class="text-sm font-semibold uppercase tracking-[0.16em]">Huz Studio</span>
+        </a>
+
+        <nav class="hidden items-center gap-7 text-xs uppercase tracking-[0.14em] md:flex" aria-label="Ana menü">
+          <a href="#isler" class="opacity-60 transition-opacity hover:opacity-100">İşler</a>
+          <a href="#hakkinda" class="opacity-60 transition-opacity hover:opacity-100">Hakkında</a>
+          <a href="#iletisim" class="opacity-60 transition-opacity hover:opacity-100">İletişim</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <button data-theme-toggle type="button" class="grid size-9 place-items-center rounded-full border border-black/20 transition hover:bg-black hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-black/40 dark:border-white/25 dark:hover:bg-white dark:hover:text-black dark:focus-visible:ring-white/50" aria-label="Koyu temaya geç" aria-pressed="false">
+            <span class="size-2.5 rounded-full bg-current shadow-[7px_0_0_currentColor]" aria-hidden="true"></span>
+          </button>
+          <button data-menu-toggle type="button" class="grid size-9 place-items-center rounded-full border border-black/20 md:hidden dark:border-white/25" aria-label="Menüyü aç" aria-expanded="false">
+            <span aria-hidden="true">≡</span>
+          </button>
+        </div>
+      </div>
+      <nav data-mobile-menu class="hidden border-t border-black/15 px-5 py-4 text-xs uppercase tracking-[0.14em] dark:border-white/15 md:hidden" aria-label="Mobil menü">
+        <div class="mx-auto grid max-w-7xl gap-4">
+          <a href="#isler">İşler</a>
+          <a href="#hakkinda">Hakkında</a>
+          <a href="#iletisim">İletişim</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="icerik">
+      <section class="mx-auto flex min-h-[calc(100svh-4rem)] max-w-7xl flex-col justify-between px-5 py-10 sm:px-8 sm:py-14">
+        <div class="flex items-start justify-between gap-6 text-[10px] uppercase tracking-[0.18em] opacity-55 sm:text-xs">
+          <span>Bağımsız ürün stüdyosu</span>
+          <span class="text-right">Bursa, Türkiye<br />40.3777° N / 28.8822° E</span>
+        </div>
+
+        <div class="max-w-6xl py-20">
+          <p class="mb-5 text-xs uppercase tracking-[0.2em] opacity-55">Düşün / Tasarla / Üret</p>
+          <h1 class="text-[clamp(3.3rem,10vw,9rem)] font-medium leading-[0.88] tracking-[-0.085em]">
+            Sessiz.<br />Net.<br /><span class="text-neutral-400 dark:text-neutral-600">Oynanabilir.</span>
+          </h1>
+        </div>
+
+        <div class="grid gap-8 border-t border-black/20 pt-6 text-sm dark:border-white/20 md:grid-cols-12">
+          <p class="max-w-xl leading-7 md:col-span-6">Gürültüyü azaltıp iyi fikre odaklanan küçük bir stüdyoyuz. Günlük hayata karışan araçlar ve tekrar açmak isteyeceğiniz oyunlar üretiyoruz.</p>
+          <a href="#isler" class="group flex items-end gap-3 md:col-span-3 md:col-start-10 md:justify-end">
+            <span class="text-xs uppercase tracking-[0.16em]">Projeleri gör</span>
+            <span class="transition-transform group-hover:translate-y-1">↓</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="isler" class="border-y border-black/15 bg-paper dark:border-white/15 dark:bg-night">
+        <div class="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-32">
+          <div class="mb-12 flex items-end justify-between border-b border-black/20 pb-4 dark:border-white/20">
+            <h2 class="text-xs font-medium uppercase tracking-[0.2em]">Seçili işler</h2>
+            <span class="text-xs opacity-50">01—02</span>
+          </div>
+
+          <div class="grid gap-5 lg:grid-cols-12">
+            <a href="/taptac/" class="group relative min-h-[460px] overflow-hidden border border-black/20 bg-ink p-6 text-paper dark:border-white/20 dark:bg-paper dark:text-ink sm:p-8 lg:col-span-8">
+              <div class="absolute inset-0 opacity-25" style="background-image: radial-gradient(circle at center, currentColor 1px, transparent 1px); background-size: 18px 18px;"></div>
+              <div class="relative flex h-full min-h-[400px] flex-col justify-between">
+                <div class="flex items-start justify-between text-[10px] uppercase tracking-[0.18em] opacity-70 sm:text-xs">
+                  <span>Apple Watch / Tic-tac-toe</span><span>2026</span>
+                </div>
+                <div>
+                  <div class="mb-7 flex max-w-sm flex-wrap gap-2" aria-hidden="true">
+                    <span class="grid size-12 place-items-center rounded-full border border-current">X</span>
+                    <span class="grid size-12 place-items-center rounded-full border border-current">O</span>
+                    <span class="grid size-12 place-items-center rounded-full border border-current">X</span>
+                    <span class="grid size-12 place-items-center rounded-full border border-current">O</span>
+                  </div>
+                  <h3 class="text-4xl font-medium tracking-[-0.06em] sm:text-6xl">TapTac</h3>
+                  <p class="mt-4 max-w-lg text-sm leading-6 opacity-70">A focused tic-tac-toe game for Apple Watch. Play offline, online, or with a nearby watch.</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://github.com/huzstudio/qrstudio" target="_blank" rel="noreferrer" class="group flex min-h-[360px] flex-col justify-between border border-black/20 p-6 transition-colors hover:bg-black hover:text-white dark:border-white/20 dark:hover:bg-white dark:hover:text-black sm:p-8 lg:col-span-4">
+              <div class="flex items-start justify-between text-[10px] uppercase tracking-[0.18em] opacity-60 sm:text-xs">
+                <span>Web aracı</span><span>↗</span>
+              </div>
+              <div>
+                <div class="mb-8 grid size-24 grid-cols-5 gap-1 border border-current p-3 opacity-70" aria-hidden="true">
+                  <span class="col-span-2 row-span-2 bg-current"></span><span></span><span class="col-span-2 row-span-2 bg-current"></span><span></span><span class="bg-current"></span><span></span><span class="bg-current"></span><span></span><span class="col-span-2 row-span-2 bg-current"></span><span></span><span class="bg-current"></span>
+                </div>
+                <h3 class="text-3xl font-medium tracking-[-0.05em]">QR Studio</h3>
+                <p class="mt-4 text-sm leading-6 opacity-65">Hızlı ve yalın QR kod üreticisi. Açık kaynak, doğrudan ve ücretsiz.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="hakkinda" class="mx-auto grid max-w-7xl gap-12 px-5 py-24 sm:px-8 sm:py-32 md:grid-cols-12">
+        <div class="md:col-span-3"><span class="text-xs uppercase tracking-[0.2em] opacity-55">Hakkında</span></div>
+        <div class="md:col-span-8 md:col-start-5">
+          <p class="text-2xl leading-[1.45] tracking-[-0.045em] sm:text-4xl">Huz Studio, bağımsız yazılım ürünleri geliştiren küçük bir tasarım ve teknoloji pratiğidir.</p>
+          <div class="mt-12 grid gap-8 border-t border-black/20 pt-6 text-sm leading-7 dark:border-white/20 sm:grid-cols-2">
+            <p>Ürünleri gereksiz özelliklerden arındırır; hız, erişilebilirlik ve uzun ömürlü bir görsel dil üzerine kurarız.</p>
+            <p>Mobil oyunlardan küçük web araçlarına kadar her projede aynı ilke geçerli: kullanması kolay, hatırlaması güzel.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="iletisim" class="bg-ink text-paper dark:bg-paper dark:text-ink">
+        <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
+          <p class="text-xs uppercase tracking-[0.2em] opacity-55">İletişim</p>
+          <div class="mt-10 flex flex-col justify-between gap-10 md:flex-row md:items-end">
+            <a href="mailto:info@huzstudio.com" class="group break-all text-[clamp(1.8rem,5vw,5rem)] font-medium leading-none tracking-[-0.07em]">info@huzstudio.com<span class="inline-block transition-transform group-hover:translate-x-2">↗</span></a>
+            <a href="https://github.com/huzstudio" target="_blank" rel="noreferrer" class="text-xs uppercase tracking-[0.18em] opacity-60 hover:opacity-100">GitHub ↗</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-ink px-5 pb-8 text-paper dark:bg-paper dark:text-ink sm:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-5 border-t border-white/20 pt-6 text-[10px] uppercase tracking-[0.15em] dark:border-black/20 sm:flex-row sm:items-center sm:justify-between">
+        <span>© <span data-year></span> Huz Studio</span>
+        <div class="flex flex-wrap gap-x-5 gap-y-2 opacity-60">
+          <a href="/taptac/privacy-policy/" class="hover:opacity-100">Privacy Policy</a>
+          <a href="/taptac/terms/" class="hover:opacity-100">Terms</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/app.js" defer></script>
   </body>
 </html>

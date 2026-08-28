@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="TapTac is a focused tic-tac-toe game for Apple Watch." />
+    <meta name="theme-color" content="#f4f3ef" />
+    <title>TapTac — Huz Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' };</script>
+  </head>
+  <body class="bg-[#f4f3ef] text-[#141414] antialiased dark:bg-[#111] dark:text-[#f4f3ef]">
+    <main class="mx-auto flex min-h-screen max-w-3xl flex-col px-6 py-12 sm:px-10">
+      <a href="/" class="text-xs uppercase tracking-[0.18em] opacity-60 hover:opacity-100">Huz Studio</a>
+      <div class="my-auto py-20">
+        <p class="mb-5 text-xs uppercase tracking-[0.2em] opacity-60">Apple Watch game</p>
+        <h1 class="text-6xl font-medium tracking-[-0.08em] sm:text-8xl">TapTac</h1>
+        <p class="mt-8 max-w-xl text-lg leading-8 opacity-70">A simple, native tic-tac-toe game for Apple Watch. Play against the watch, pass one watch between two players, or play online.</p>
+        <nav class="mt-12 grid gap-3 text-sm sm:grid-cols-3" aria-label="TapTac information">
+          <a class="border border-current px-4 py-3 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black" href="/taptac/privacy-policy/">Privacy Policy ↗</a>
+          <a class="border border-current px-4 py-3 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black" href="/taptac/terms/">Terms of Use ↗</a>
+          <a class="border border-current px-4 py-3 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black" href="/taptac/support/">Support ↗</a>
+        </nav>
+      </div>
+      <footer class="border-t border-black/20 pt-5 text-xs opacity-60 dark:border-white/20">© <span data-year></span> Huz Studio · <a href="mailto:info@huzstudio.com" class="underline">info@huzstudio.com</a></footer>
+    </main>
+    <script>document.querySelector('[data-year]').textContent = new Date().getFullYear();</script>
+  </body>
+</html>
